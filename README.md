@@ -14,10 +14,16 @@ A web scraper built with **Selenium** and **Python** to extract company informat
 
 ---
 ## Project Structure
-(selenium_streamlit/
+selenium_streamlit/
 ├── backend/
 │   └── main.py         # Selenium scraper logic
 ├── frontend/
 │   └── app.py         # frontend
-├── README.md           # This file)
+├── README.md           # This file
 
+
+## TECHNOLOGIES USED
+
+- Selenium
+- Python
+- Streamlit
