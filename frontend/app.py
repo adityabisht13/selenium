@@ -1,11 +1,9 @@
-
-import streamlit as st
 import sys
 import os
-
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from backend.main import run_scraper  #  Import function from backend/main.py(backend not locating that why use import sys)
+from backend.main import scrape_maps  #  Import function from backend/main.py(backend not locating that why use import sys)
 import pandas as pd
+import streamlit as st
 
 st.set_page_config(page_title="Google Maps Scraper", layout="centered")
 
@@ -17,7 +15,7 @@ button=st.button("Start Scraping")
 if button:
     with st.spinner("Scraping in progress..."):
         try:
-            pd = run_scraper(query, max_results)
+            pd = scrape_maps(query, max_results)
             st.success("Scraping complete!")
             st.dataframe(pd)
 
